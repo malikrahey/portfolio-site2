@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <script type="module" src="/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="./node_modules/swup/dist/swup.min.js"></script>
+    <script defer src="misc.js"></script>
+    <title>Malik Rahey</title>
+  </head>
+  
+  <body>
+    <canvas id="bg"></canvas>
+    <div class="container">
+    <main id="swup" class="transition-fade">
+      <nav class="navbar">
+        <ul>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#demos">Demos</a></li>
+        </ul>
+      </nav>
+      <header id="header">
+        <h1>Malik Rahey</h1>
+        <p class="fade-in" id="alternating-sub-title">Welcome to my website!</p>
+        
+      </header>
+      <blockquote>
+        <p>Scroll or click on the navbar to get started</p>
+      </blockquote>
+      <section id="about">
+        <h2>📜 About me</h2>
+        <p>
+          I am Computer Engineering Student attending Memorial University in Newfoundland. I am currently a fourth year student with a cumulative GPA of 3.8/4.0.
+        </p>
+
+        <p>
+          I am an aspiring software developer with over 16 months of internship experience. My roles in these internships have ranged from fullstack development, to leading development on a template enclosure generator that is accessed as a REST API. I have also been able to gain more software development experience through my many side projects, in which I have built versatile automated webscrapers, built games in the Unity game engine, and have built multiple websites in both plain Javascript and Reactjs
+        </p>
+
+        <p>
+          My personal interests include game development, machine learning, Esports, and studying financial markets.
+        </p>
+      </section>
+
+      <section id="projects" class="light">
+        <h2>👨‍💻Projects</h2>
+
+        <p>
+          Throughout my time in software development, both as a hobby and in education, I have developed many side projects. These projects range from Android applications built in Unity, automated webscraping, to this portfolio site. 
+        </p>
+        <span>For a detailed view of all of my projects, </span>
+        <a href="/projects.html">Click Here</a>
+
+        <h2>💻 Skills</h2>
+
+        <ul class="skills-list">
+          <li>Python</li>
+          <li>Javascript</li>
+          <li>C/C++</li>
+          <li>C#</li>
+          <li>Java</li>
+          <li>Reactjs</li>
+          <li>Unity</li>
+        </ul>
+
+      </section>
+
+      <blockquote>
+        <p>The best way out is always through <br>-Robert Frost</p>
+      </blockquote>
+
+      <section id="work" class="left">
+        <h2>💼 Work History</h2>
+
+        <h3>Nokia</h3>
+        <details>
+          <summary>Software Developer Coop | 2019-2019</summary>
+          <ul>
+            <li>Managed automated tests in the Home Device Manager division using tools such as Selenium and Cucumber</li>
+            <li>Managed remote testing environments</li>
+            <li>Created and added to existing documentation for Home Device Manager with a focus on assisting existing and onboarding employees</li>
+          </ul>
+        </details>
+        
+        
+        <h3>totaliQ</h3>
+        <details>
+          <summary>2019-2019</summary>
+          <ul>
+            <li>Created an automated metrics microservice using AWS Lambda that gathers and formats user metrics and emails the results to the Business Development team.</li>
+            <li>Created new frontend feautures</li>
+            <li>Repaired backend bugs</li>
+          </ul>
+        </details>
+        <h3>Protocase</h3>
+        <details>
+          <summary>2019-2019</summary>
+          <ul>
+            <li>Led development on a Enclosure Template Generator. The template generator acts as a REST API that allows customers to request a customized enclosure in various file formats to be used in the CAD program of their choice </li>
+            <li>Developed new features for the company's 3D CAD program Protocase Designer</li>
+            <li>Repaired bugs in Protocase Designer</li>
+          </ul>
+        </details>
+
+      </section>
+
+      <section id="demos" class="right">
+        <h2>Demos</h2>
+        Come back soon for playable demos
+      </section>
+    </main>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/CSSRulePlugin.min.js" integrity="sha512-EIzKYNrmzSj8Q5czLrNi/F6bplhopAp2Li9nk/8r7MW+Ov9KPEo0xrjWMYXU8lFYy5dzh/w8Ql5ShZHucrjXdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      //const header = document.querySelector('header');
+      const header = document.getElementById('header');
+      const blockquote = document.querySelector('blockquote');
+      const nav = document.getElementsByClassName('navbar');
+      const tl = gsap.timeline();
+
+      tl.to(header, {delay: 0.5, duration: 3, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', y: '50px'});
+      //tl.to(blockquote, {delay: 0.5, duration: 1.5, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', y: '30px'});
+      tl.to(nav, {delay: -1.5, duration: 1.5, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'});
+
+      const SUBTITLES = ["Welcome to my Website!", "Software Engineering","Fullstack Development", "Machine Learning"];
+
+      const subtile = document.getElementById("alternating-sub-title");
+      let i = 0;
+      setInterval(() => {
+        if(subtile.className === "fade-in") {
+          subtile.className = "fade-out"
+        } else {
+          i++;
+          subtile.innerHTML = SUBTITLES[i%SUBTITLES.length];
+          subtile.className = "fade-in";
+        }
+        
+
+      }, 1000);
+
+    </script>
+  </body>
+</html>
