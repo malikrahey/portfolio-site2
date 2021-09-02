@@ -4,7 +4,7 @@ const { defineConfig } = require('vite');
 
 module.exports = defineConfig({
   build: {
-    base: "/",
+    base: "/portfolio-site2/",
     publicDir: "./",
     rollupOptions: {
       input: {
