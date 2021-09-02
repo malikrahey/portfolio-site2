@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from './node_modules/three';
 import './style.css';
 
 //Initialization
@@ -11,9 +11,9 @@ const renderer = new THREE.WebGLRenderer({
 
 
 const loader = new THREE.TextureLoader();
-const texture = loader.load('texture.jpg');
-const height = loader.load('clouds.jpg');
-const alpha = loader.load('alpha.png');
+const texture = loader.load('./texture.jpg');
+const height = loader.load('./clouds.jpg');
+const alpha = loader.load('./alpha.png');
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth,window.innerHeight);
