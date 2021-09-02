@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.17e50649.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <script defer src="./misc.js"></script>
+    <title>Projects</title>
+<script type="module" crossorigin src="/assets/nested.e5b71071.js"></script>
+  <link rel="modulepreload" href="/assets/vendor.1b65316d.js">
+  <link rel="stylesheet" href="/assets/style.029cad4d.css">
+</head>
+
+<body>
+    <canvas id="bg"></canvas>
+    <main>
+        
+        <nav class="navbar return-to-home">
+            <ul class="return-to-home">
+              <li><a href="/index.html"> Back to Home</a></li>
+            </ul>
+          </nav>
+        <header id="header">
+            <h1>Projects</h1>
+        </header>
+        <section class="left">
+            <h2>Mass Agent - Unity RTS</h2>
+            <p>A Real Time Strategy game made in the unity game engine</p>
+            <h3>Skill Used</h3>
+            <ul>
+                <li>Unity</li>
+                <li>C#</li>
+                <li>Artificial Intelligence</li>
+            </ul>
+        </section>
+        <section class="right">
+            <h2>bettrfilm</h2>
+            <p>A Higher/Lower Website where users are prompted to guess the highest grossing movie, between two movies</p>
+            <h3>Skill Used</h3>
+            <ul>
+                <li>Reactjs</li>
+                <li>Javascript</li>
+                <li>Python</li>
+            </ul>
+        </section>
+        <section class="left">
+            <h2>Webscraping</h2>
+            <p></p>
+            <h3>Skills Used</h3>
+            <ul>
+                <li>Python</li>
+            </ul>
+        </section>
+        <section class="right">
+            <h2>CSBookie</h2>
+            <p></p>
+            <h3>Skills Used</h3>
+            <ul>
+                <li></li>
+            </ul>
+        </section>
+        <section class="right">
+            <h2>Android App Development - Unity</h2>
+            <p></p>
+            <h3>Skills Used</h3>
+            <ul>
+                <li></li>
+            </ul>
+        </section>
+        <section class="right">
+            <h2>Self Driving Cars - Unity</h2>
+            <p>Neural Network powered</p>
+            <h3>Skills Used</h3>
+            <ul>
+                <li></li>
+            </ul>
+        </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/CSSRulePlugin.min.js" integrity="sha512-EIzKYNrmzSj8Q5czLrNi/F6bplhopAp2Li9nk/8r7MW+Ov9KPEo0xrjWMYXU8lFYy5dzh/w8Ql5ShZHucrjXdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      //const header = document.querySelector('header');
+      const header = document.getElementById('header');
+      const blockquote = document.querySelector('blockquote');
+      const nav = document.getElementsByClassName('navbar');
+      const tl = gsap.timeline();
+
+      tl.to(header, {delay: 0.5, duration: 3, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', y: '50px'});
+      tl.to(blockquote, {delay: 0.5, duration: 1.5, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', y: '30px'});
+      tl.to(nav, {delay: -1.5, duration: 1.5, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'});
+    </script>
+</body>
+</html>
