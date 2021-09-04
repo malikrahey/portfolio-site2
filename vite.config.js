@@ -8,8 +8,8 @@ module.exports = defineConfig({
     publicDir: "./",
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        nested: resolve(__dirname, 'projects.html')
+        main: resolve(__dirname, '../portfolio-site2/index.html'),
+        nested: resolve(__dirname, '../portfolio-site2/projects.html')
       }
     }
   }
