@@ -2,13 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/portfolio-site2/assets/favicon.17e50649.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.17e50649.svg" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Malik Rahey</title>
-  <script type="module" crossorigin src="/portfolio-site2/assets/main.8c9ac4b8.js"></script>
-  <link rel="modulepreload" href="/portfolio-site2/assets/vendor.1b65316d.js">
-  <link rel="stylesheet" href="/portfolio-site2/assets/style.029cad4d.css">
+  <script type="module" crossorigin src="/assets/main.71cc2913.js"></script>
+  <link rel="modulepreload" href="/assets/vendor.1b65316d.js">
+  <link rel="stylesheet" href="/assets/style.1691763b.css">
 </head>
   
   <body>
@@ -132,7 +132,13 @@
 
       const subtile = document.getElementById("alternating-sub-title");
       let i = 0;
+      let alternateText = false;
+      setTimeout(() => {
+
+        alternateText = true;
+      },4000);
       setInterval(() => {
+        if(!alternateText) return;
         if(subtile.className === "fade-in") {
           subtile.className = "fade-out"
         } else {

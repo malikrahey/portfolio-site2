@@ -129,7 +129,13 @@
 
       const subtile = document.getElementById("alternating-sub-title");
       let i = 0;
+      let alternateText = false;
+      setTimeout(() => {
+
+        alternateText = true;
+      },4000);
       setInterval(() => {
+        if(!alternateText) return;
         if(subtile.className === "fade-in") {
           subtile.className = "fade-out"
         } else {
