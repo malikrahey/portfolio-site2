@@ -4,12 +4,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "vite": "^2.3.8"
   },
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "gsap": "^3.7.1",
     "swup": "^2.0.14",
     "three": "^0.129.0"
