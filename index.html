@@ -42,6 +42,7 @@
         <p>
           My personal interests include game development, machine learning, Esports, and studying financial markets.
         </p>
+        <p>I am a native English speaker, with limited working proficiency in Brazillian Portuguese, and elemtary proficiency in Latin American Spanish</p>
       </section>
 
       <section id="projects" class="light">
@@ -66,10 +67,6 @@
         </ul>
 
       </section>
-
-      <blockquote>
-        <p>The best way out is always through <br>-Robert Frost</p>
-      </blockquote>
 
       <section id="work" class="left">
         <h2>💼 Work History</h2>
@@ -115,14 +112,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js" integrity="sha512-2fk3Q4NXPYAqIha0glLZ2nluueK43aNoxvijPf53+DgL7UW9mkN+uXc1aEmnZdkkZVvtJZltpRt+JqTWc3TS3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/CSSRulePlugin.min.js" integrity="sha512-EIzKYNrmzSj8Q5czLrNi/F6bplhopAp2Li9nk/8r7MW+Ov9KPEo0xrjWMYXU8lFYy5dzh/w8Ql5ShZHucrjXdg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-      //const header = document.querySelector('header');
       const header = document.getElementById('header');
       const blockquote = document.querySelector('blockquote');
       const nav = document.getElementsByClassName('navbar');
       const tl = gsap.timeline();
 
       tl.to(header, {delay: 0.5, duration: 3, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', y: '50px'});
-      //tl.to(blockquote, {delay: 0.5, duration: 1.5, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)', y: '30px'});
       tl.to(nav, {delay: -1.5, duration: 1.5, clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)'});
 
       const SUBTITLES = ["Welcome to my Website!", "Software Engineering","Fullstack Development", "Machine Learning"];
