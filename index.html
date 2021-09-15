@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script type="module" src="./main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Malik Rahey</title>
@@ -13,12 +14,16 @@
     <div class="container">
     <main>
       <nav class="navbar">
-        <ul>
+          <input type="checkbox" id="check"/>
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+          </label>      
+        <ul class="nav-ul">
           <li><a href="#header">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#work">Work</a></li>
-          <li><a href="#demos">Demos</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <header id="header">
@@ -103,9 +108,12 @@
 
       </section>
 
-      <section id="demos" class="right">
-        <h2>Demos</h2>
-        Come back soon for playable demos
+      <section id="contact" class="right">
+        <h2>Contact</h2>
+        <a class="linked-in" href="https://www.linkedin.com/in/malikrahey/" target="blank">
+        <img class="rounded-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png">
+        </a>
+        <p>contact@malikrahey.dev</p>
       </section>
     </main>
   </div>

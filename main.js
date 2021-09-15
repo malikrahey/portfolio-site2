@@ -10,9 +10,12 @@ const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
 });
 
-renderer.setPixelRatio(window.devicePixelRatio);
+
 renderer.setSize(window.innerWidth,window.innerHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
 renderer.render(scene,camera);
+
+
 
 const geometry = new THREE.TorusGeometry(10,3,16,100);
 
