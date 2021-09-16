@@ -13,12 +13,11 @@
     <canvas id="bg"></canvas>
     <div class="container">
     <main>
-      <nav class="navbar">
-          <input type="checkbox" id="check"/>
-          <label for="check" class="checkbtn">
+      <nav class="navbar" id="main-nav">
+          <div class="checkbtn" id="check">
             <i class="fas fa-bars"></i>
-          </label>      
-        <ul class="nav-ul">
+          </div>      
+        <ul class="nav-ul" id="nav-ul">
           <li><a href="#header">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -113,7 +112,7 @@
         <a class="linked-in" href="https://www.linkedin.com/in/malikrahey/" target="blank">
         <img class="rounded-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/768px-LinkedIn_logo_initials.png">
         </a>
-        <p>contact@malikrahey.dev</p>
+        <p id="email-link">contact@malikrahey.dev</p>
       </section>
     </main>
   </div>
@@ -131,6 +130,26 @@
       const SUBTITLES = ["Welcome to my Website!", "Software Engineering","Fullstack Development", "Machine Learning"];
 
       const subtile = document.getElementById("alternating-sub-title");
+
+
+
+      const check = document.getElementById("check");
+      const navUL  = document.getElementById("nav-ul");
+
+
+      check.onclick = () => {
+        console.log("show clicked");
+        navUL.className = (navUL.className === "nav-ul show") ? "nav-ul" : "nav-ul show";
+        nav[0].className = (nav[0].className === "navbar expanded") ? "navbar" : "navbar expanded";
+
+      }
+
+      const emailLink = document.getElementById("email-link");
+      emailLink.onclick = () => {
+        window.open("mailto:contact@malikrahey.dev?subject=Interest In Portfolio");
+      }
+
+
       let i = 0;
       let alternateText = false;
       setTimeout(() => {
